@@ -1,9 +1,11 @@
-##Starbuck_Capstone
+# Starbuck_Capstone
 
-##Motivation
+## Motivation
+
 My goal of this project is to build a predict model to find out whether a customer will respond to an certain offer based on the simulated. The model I choose is LighGBM.
 
-##Libraries
+## Libraries
+
 pandas 
 numpy 
 math
@@ -17,7 +19,8 @@ helper
 lightgbm 
 re
 
-##Data Set
+## Data Set
+
 The data is contained in three files:
 
 1. portfolio.json - containing offer ids and meta data about each offer (duration, type, etc.)
@@ -26,13 +29,15 @@ The data is contained in three files:
 
 3. transcript.json - records for transactions, offers received, offers viewed, and offers completed
 
-##Files
+## Files
+
 Files
 README.md - this file
 
 Starbucks_Capstone_notebook.ipynb - code file
 
-##Results
+## Results
+
 After several round of tunning the result of RMSE for test data reaches 0.000556 and the log_loss is lower than 0.000166. From the model we can tell that the top 3 important features for split are:
 
 1.Customers' income
