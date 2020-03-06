@@ -1,5 +1,4 @@
-Starbuck_Capstone
-==============================
+##Starbuck_Capstone
 
 ##Motivation
 My goal of this project is to build a predict model to find out whether a customer will respond to an certain offer based on the simulated. The model I choose is LighGBM.
