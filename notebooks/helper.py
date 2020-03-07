@@ -100,3 +100,14 @@ def process_transcript(path):
     offer = transcript[transcript.event.isin(['offer received','offer viewed','offer completed'])][['event','offer_id','customer_id','time','received','viewed','completed']]
     transaction = transcript[transcript.event =='transaction' ][['customer_id','time','amount']]
     return offer,transaction
+
+def lgb_f1_score(y_hat, data):
+    """ F1 score metric for lightGBM
+    
+    Arguments:
+        y_hat {array} -- the prediction data
+        data  {array} -- the real data
+    """   
+    y_true = data.get_label()
+    y_hat = np.round(y_hat) # scikits f1 doesn't like probabilities
+    return 'f1', f1_score(y_true, y_hat), True
